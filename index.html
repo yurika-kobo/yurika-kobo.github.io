@@ -71,6 +71,11 @@ p { margin: 0; }
 .hero h1 { font-size: clamp(1.7rem, 6.6vw, 2.8rem); font-weight: 700; letter-spacing: 0.04em; }
 .hero h1 .r { color: var(--ori); }
 .hero h1 .b { color: var(--tsukuru); }
+/* キャッチコピー: スマホは各文1行、PC(52rem以上)は各文を「ものを」で2行 */
+.catch .ln { white-space: nowrap; }
+.catch .pc { display: none; }
+@media (max-width: 51.99rem) { .hero h1.catch { font-size: 6.2vw; letter-spacing: 0.02em; } }
+@media (min-width: 52rem) { .catch .pc { display: inline; } }
 .hero .lead { margin-top: 1.25rem; font-size: 1.1rem; max-width: 34em; }
 .cta-row { margin-top: 1.75rem; display: flex; flex-wrap: wrap; gap: 0.75rem; }
 .btn { display: inline-flex; flex-direction: column; justify-content: center; min-height: 3.6rem; padding: 0.6rem 1.4rem; background: var(--indigo); color: var(--on-indigo); text-decoration: none; border-radius: 4px; line-height: 1.35; font-weight: 700; }
@@ -164,7 +169,7 @@ footer .brand { font-size: 1.1rem; display: inline-block; margin-bottom: 0.25rem
     <div class="wrap">
       <div>
         <p class="eyebrow">千葉県印西市高花 ・ 手織り教室</p>
-        <h1 style="margin-top:0.6rem"><span class="r">織</span>りたいものを<span class="r">織</span>りましょう<br><span class="b">創</span>りたいものを<br><span class="b">創</span>りましょう</h1>
+        <h1 class="catch" style="margin-top:0.6rem"><span class="ln"><span class="r">織</span>りたいものを<br class="pc"><span class="r">織</span>りましょう</span><br><span class="ln"><span class="b">創</span>りたいものを<br class="pc"><span class="b">創</span>りましょう</span></h1>
         <p class="lead">昭和10年生まれの先生が教える手織り教室です。織機は工房にそろっています。ご自宅に機を置く必要はありません。いつからでも入会できます。</p>
         <div class="cta-row">
           <a class="btn" href="tel:0476465861"><small>お電話でどうぞ</small><b>0476-46-5861</b></a>
